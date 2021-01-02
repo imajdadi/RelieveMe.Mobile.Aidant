@@ -5,11 +5,11 @@
     <string name="hint_name">Nom et Prénom</string>
     <string name="login">Connexion</string>
     <string name="register">S inscrire</string>
-    <string name="btn_link_to_register">Not a member? Sign up now.</string>
-    <string name="btn_link_to_login">Already registred! Login Me.</string>
-    <string name="welcome">Welcome</string>
-    <string name="logout">logout</string>
-    <string name="change_password">Change Password</string>
-    <string name="old_password">Old Password</string>
-    <string name="new_password">New Password</string>
+    <string name="btn_link_to_register">Créer votre compte</string>
+    <string name="btn_link_to_login">Connectez-vous</string>
+    <string name="welcome">Bienvenue sur RelieveMe Aidant</string>
+    <string name="logout">Déconnexion</string>
+    <string name="change_password">Modifier votre mot de passe</string>
+    <string name="old_password">Ancien mot de passe</string>
+    <string name="new_password">Nouveau mot de passe</string>
 </resources>
