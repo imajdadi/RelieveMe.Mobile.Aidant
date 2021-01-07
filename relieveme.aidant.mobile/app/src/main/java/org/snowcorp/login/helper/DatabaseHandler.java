@@ -8,11 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.HashMap;
 
-/**
- * Created by Akshay Raj on 13-03-2016.
- * Snow Corporation Inc.
- * www.snowcorp.org
- */
+
 public class DatabaseHandler extends SQLiteOpenHelper {
 
     // All Static variables

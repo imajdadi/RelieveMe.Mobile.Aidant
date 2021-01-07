@@ -14,11 +14,7 @@ import androidx.fragment.app.FragmentManager;
 import org.snowcorp.login.R;
 import org.snowcorp.login.widget.ProgressBarDialog;
 
-/**
- * Created by Akshay Raj on 06-02-2017.
- * akshay@snowcorp.org
- * www.snowcorp.org
- */
+
 
 public class Functions {
 
