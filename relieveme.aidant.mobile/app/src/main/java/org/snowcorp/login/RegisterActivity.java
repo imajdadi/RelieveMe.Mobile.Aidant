@@ -100,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             Bundle b = new Bundle();
                             b.putString("email", email);
-                            Intent i = new Intent(RegisterActivity.this, EmailVerify.class);
+                            Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
                             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             i.putExtras(b);
                             startActivity(i);

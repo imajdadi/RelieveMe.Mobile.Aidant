@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RelieveMe Aidant</string>
+
+    <array name="rappel_list">
+        <item>Dans une heure</item>
+        <item>A midi</item>
+        <item>Ce soir 06:00 PM</item>
+        <item>Demain à 09:00 AM</item>
+        <item>Choisir une date</item>
+    </array>
+
+    <array name="repeat_list">
+        <item>Tous les jours</item>
+        <item>Toutes les semaines</item>
+        <item>Tous les mois</item>
+    </array>
+
+    <array name="priority_list">
+        <item>Bas</item>
+        <item>Moyen</item>
+        <item>Élevé </item>
+    </array>
+
+    <array name="difficulty_list">
+        <item>Bas</item>
+        <item>Moyen</item>
+        <item>Élevé </item>
+    </array>
 </resources>

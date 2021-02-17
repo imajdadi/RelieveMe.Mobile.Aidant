@@ -37,11 +37,11 @@
 
         } else {
 
-            $query = "INSERT INTO users ( `unique_id`, `name`, `email`, `encrypted_password`, `otp`, `created_at` ) 
-            VALUES ( :uuid, :name, :email, :encrypted_password, :otp, NOW() )";
+            $query = "INSERT INTO users ( `unique_id`, `name`, `email`, `encrypted_password`, `otp`, `created_at`,`verified`  ) 
+            VALUES ( :uuid, :name, :email, :encrypted_password, :otp, NOW(),1 )";
 
 			$otp = rand(100000, 999999);
-			$verified = 0;
+			$verified = 1;
 
             $query_params = array(
                 ':uuid' => uniqid('', true),

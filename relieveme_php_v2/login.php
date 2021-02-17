@@ -6,7 +6,7 @@ if (!empty($_POST)) {
 
     $response = array("error" => FALSE);
 
-    $query = "SELECT * FROM users WHERE email = :email";
+    $query = "SELECT *, COALESCE((SELECT watchUsers_table.idWatchUser     FROM watchUsers_table where users.id = watchUsers_table.userId_fk  ),0) watchUsers FROM `users`  WHERE email = :email";
 
     $query_params = array(
         ':email' => $_POST['email']
@@ -36,11 +36,12 @@ if (!empty($_POST)) {
     if ($login_ok == true) {
         $response["error"] = false;
         $response["message"] = "Login successful!";
-        $response["user"]["uid"] = $row["unique_id"];
+        $response["user"]["uid"] = $row["id"];
         $response["user"]["name"] = $row["name"];
         $response["user"]["email"] = $row["email"];
         $response["user"]["verified"] = $row["verified"];
         $response["user"]["created_at"] = $row["created_at"];
+		$response["user"]["watchUsers"] = $row["watchUsers"];
         die(json_encode($response));
 
     } else {
