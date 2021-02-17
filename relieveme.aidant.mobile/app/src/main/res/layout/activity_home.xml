@@ -7,8 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="top|center">
+        android:gravity="top|center"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,33 +27,40 @@
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"/>
+            android:textSize="13sp" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="254dp"
+            android:layout_height="258dp"
             app:srcCompat="@drawable/_" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_find_user"
+            android:layout_width="258dp"
+            android:layout_height="67dp"
+            android:layout_above="@+id/logout"
+            android:layout_marginBottom="10dp"
+            android:text="scanner le compte - Ajouter une Tâche"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorPrimary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/change_password"
+            android:layout_width="258dp"
+            android:layout_height="67dp"
+            android:text="@string/change_password"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorPrimary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logout"
+            android:layout_width="258dp"
+            android:layout_height="67dp"
+            android:text="@string/logout"
+            android:textColor="@color/white"
+            app:backgroundTint="#002244" />
+
     </LinearLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/change_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/logout"
-        android:layout_marginBottom="10dp"
-        app:backgroundTint="@color/colorPrimary"
-        android:text="@string/change_password"
-        android:textColor="@color/white"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:backgroundTint="#F44336"
-        android:text="@string/logout"
-        android:textColor="@color/white"/>
 
 </RelativeLayout>

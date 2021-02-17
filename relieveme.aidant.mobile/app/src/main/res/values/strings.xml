@@ -10,6 +10,33 @@
     <string name="welcome">Bienvenue sur RelieveMe Aidant</string>
     <string name="logout">Déconnexion</string>
     <string name="change_password">Modifier votre mot de passe</string>
+    <string name="find_user">Ajouter la Taches</string>
     <string name="old_password">Ancien mot de passe</string>
     <string name="new_password">Nouveau mot de passe</string>
+
+    <array name="rappel_list">
+        <item>Dans une heure</item>
+        <item>A midi</item>
+        <item>Ce soir 06:00 PM</item>
+        <item>Demain à 09:00 AM</item>
+        <item>Choisir une date</item>
+    </array>
+
+    <array name="repeat_list">
+        <item>Tous les jours</item>
+        <item>Toutes les semaines</item>
+        <item>Tous les mois</item>
+    </array>
+
+    <array name="priority_list">
+        <item>Bas</item>
+        <item>Moyen</item>
+        <item>Élevé</item>
+    </array>
+
+    <array name="difficulty_list">
+        <item>Bas</item>
+        <item>Moyen</item>
+        <item>Élevé</item>
+    </array>
 </resources>

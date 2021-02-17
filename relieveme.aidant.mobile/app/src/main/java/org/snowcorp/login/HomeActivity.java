@@ -26,6 +26,7 @@ import org.json.JSONObject;
 import org.snowcorp.login.helper.DatabaseHandler;
 import org.snowcorp.login.helper.Functions;
 import org.snowcorp.login.helper.SessionManager;
+import org.snowcorp.login.helper.StaticData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,7 +35,7 @@ import java.util.Objects;
 public class HomeActivity extends AppCompatActivity {
     private static final String TAG = HomeActivity.class.getSimpleName();
 
-    private MaterialButton btnChangePass, btnLogout;
+    private MaterialButton btnChangePass, btnLogout, btn_find_user;
     private SessionManager session;
 
     private HashMap<String,String> user = new HashMap<>();
@@ -48,6 +49,7 @@ public class HomeActivity extends AppCompatActivity {
         TextView txtEmail = findViewById(R.id.email);
         btnChangePass = findViewById(R.id.change_password);
         btnLogout = findViewById(R.id.logout);
+        btn_find_user = findViewById(R.id.btn_find_user);
 
         DatabaseHandler db = new DatabaseHandler(HomeActivity.this);
         user = db.getUserDetails();
@@ -75,6 +77,21 @@ public class HomeActivity extends AppCompatActivity {
 
     private void init() {
         btnLogout.setOnClickListener(v -> logoutUser());
+
+
+        btn_find_user.setOnClickListener(v -> {
+
+            if(StaticData.WatchUserId == 0) {
+                Intent intent = new Intent(HomeActivity.this, activity_finduser.class);
+                startActivity(intent);
+            }
+            else {
+                Intent intent = new Intent(HomeActivity.this, activity_addtask.class);
+                startActivity(intent);
+            }
+            finish();
+        });
+
 
         btnChangePass.setOnClickListener(v -> {
             final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(HomeActivity.this);

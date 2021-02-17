@@ -24,6 +24,7 @@ import org.json.JSONObject;
 import org.snowcorp.login.helper.DatabaseHandler;
 import org.snowcorp.login.helper.Functions;
 import org.snowcorp.login.helper.SessionManager;
+import org.snowcorp.login.helper.StaticData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -181,11 +182,13 @@ public class LoginActivity extends AppCompatActivity {
                         if (!error) {
                             // user successfully logged in
                             JSONObject json_user = jObj.getJSONObject("user");
-
+                            StaticData.WatchUserId = json_user.getInt("watchUsers");
                             Functions logout = new Functions();
                             logout.logoutUser(getApplicationContext());
 
                             if(Integer.parseInt(json_user.getString("verified")) == 1){
+
+                                StaticData.ConnectedUSerId = json_user.getString(KEY_UID);
                                 db.addUser(json_user.getString(KEY_UID), json_user.getString(KEY_NAME),
                                         json_user.getString(KEY_EMAIL), json_user.getString(KEY_CREATED_AT));
 

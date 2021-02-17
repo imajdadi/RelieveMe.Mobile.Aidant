@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/white"
+        android:text="item of spinner drop down"
+        android:background="@color/colorPrimary"
+        android:id="@+id/item_spinner_drop_txt"
+        android:fontFamily="@font/gothamrounded_light"/>
+</FrameLayout>

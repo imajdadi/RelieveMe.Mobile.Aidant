@@ -1,25 +1,22 @@
 package org.snowcorp.login.helper;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.view.inputmethod.InputMethodManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
-import org.snowcorp.login.R;
-import org.snowcorp.login.widget.ProgressBarDialog;
+
 
 
 
 public class Functions {
 
     //Main URL
-    private static String MAIN_URL = "http://handiman.univ-paris8.fr/~imane/relieveme_php/login.php/";
+    private static String MAIN_URL = "http://handiman.univ-paris8.fr/~imane/relieveme_php_v2/";
 
     // Login URL
     public static String LOGIN_URL = MAIN_URL + "login.php";
@@ -32,6 +29,10 @@ public class Functions {
 
     // Forgot Password
     public static String RESET_PASS_URL = MAIN_URL + "reset-password.php";
+
+    public static String CREATE_WATCHUSER_URL = MAIN_URL + "register-watch-user.php";
+
+    public static String CREATE_TASK_URL = MAIN_URL + "add-task.php";
 
 
     /**
@@ -66,8 +67,8 @@ public class Functions {
 
     public static void showProgressDialog(Context context, String title) {
         FragmentManager fm = ((AppCompatActivity)context).getSupportFragmentManager();
-        DialogFragment newFragment = ProgressBarDialog.newInstance(title);
-        newFragment.show(fm, "dialog");
+       // DialogFragment newFragment = ProgressBarDialog.newInstance(title);
+       // newFragment.show(fm, "dialog");
     }
 
     public static void hideProgressDialog(Context context) {
